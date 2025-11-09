@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+@theme {
+  --shadow-3xl: 0px -5px 20px 0px rgba(132, 193, 219, 0.41); 
+}
+
+/* box-shadow: 0px -5px 20px 0px rgba(132, 193, 219, 0.41); */

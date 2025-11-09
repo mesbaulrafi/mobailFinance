@@ -4,12 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rafi Pay</title>
+    <!-- Google Font Start  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font End -->
+
+    <!-- All style css Start  -->
+    <link rel="stylesheet" href="src/all.min.css" />
     <link rel="stylesheet" href="src/output.css" />
+    <!-- All style css End  -->
   </head>
   <body>
-    <!-- Pay Start -->
+    <!-- Page 1 Start -->
 
-    <div class="max-w-[1100px] m-auto text-center">
+    <div class="max-w-[1100px] m-auto text-center mt-5" id="pageOne">
       <div class="mockup-phone">
         <div class="mockup-phone-camera"></div>
         <div
@@ -79,7 +91,100 @@
         </div>
       </div>
     </div>
-    <!-- Pay End -->
+    <!-- Page 1 End -->
+    <!-- Page 2 start  -->
+    <div class="max-w-[1100px] m-auto mt-5 mb-4 ml-[565px] font-[Outfit] text-black" id="pageTwo" hidden>
+      <div class="mockup-phone border-[#ff8938]">
+        <div class="mockup-phone-camera"></div>
+        <div class="mockup-phone-display bg-[rgb(244,245,247)] ">
+          <div class=" bg-white rounded-b-4xl">
+            <div class="logo">
+              <picture
+                ><img
+                  class="w-full mt-2"
+                  src="img/Status Bar Black.png"
+                  alt="Status Bar Black.png"
+              /></picture>
+              <picture
+                ><img class="w-full" src="img/Back Bar.png" alt="Back Bar.png"
+              /></picture>
+            </div>
+            <!-- Hedar Text  -->
+            <div class="hedding m-6">
+              <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
+              <p class="text-[16px] text-[#0808089c] mt-3">
+                Enjoy easy and convenient financial services with us. Cashout
+                charge is low and
+              </p>
+            </div>
+            <!-- Hedar Text end  -->
+            <!-- Add Money Part -->
+            <div class="p-6">
+              <div class="flex justify-between">
+                <div
+                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
+                >
+                  <img src="img/add Maney.png" alt="" class="m-auto" />
+                  <p class="text-[14px] text-[#0808089c]">Add Money</p>
+                </div>
+                <div
+                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
+                >
+                  <img src="img/Cashout.png" alt="" class="m-auto" />
+                  <p class="text-[14px] text-[#0808089c]">Cashout</p>
+                </div>
+                <div
+                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
+                >
+                  <img src="img/Transfer Money.png" alt="" class="m-auto" />
+                  <p class="text-[14px] text-[#0808089c]">Transfer Money</p>
+                </div>
+                <!-- Flex Two  -->
+              </div>
+              <div class="flex justify-between mt-6">
+                <div
+                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
+                >
+                  <img src="img/Get Bonus.png" alt="" class="m-auto" />
+                  <p class="text-[14px] text-[#0808089c]">Get Bonus</p>
+                </div>
+                <div
+                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
+                >
+                  <img src="img/Pay Bill.png" alt="" class="m-auto" />
+                  <p class="text-[14px] text-[#0808089c]">Pay Bill</p>
+                </div>
+                <div
+                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
+                >
+                  <img src="img/Transactions.png" alt="" class="m-auto" />
+                  <p class="text-[14px] text-[#0808089c]">Transactions</p>
+                </div>
+              </div>
+            </div>
+            <!-- Add Money Part End-->
+          </div>
+          <!-- Latest Payment Part -->
+          <div class="">
+            <div class="flex justify-between p-6">
+              <div class="">
+                <h2 class="font-semibold text-[20px]">Latest Payment</h2>
+              </div>
+              <div class="text-[#08080886] "><a href="#">View All</a></div>
+            </div>
+            <div class="ml-5 text-center">
+              <img src="img/Payment 1.png" alt="" class="mt-2">
+              <img src="img/Payment 2.png" alt="" class="mt-2">
+              <img src="img/Payment 3.png" alt="" class="mt-2">
+              <img src="img/Payment 4.png" alt="" class="mt-2">
+            </div>
+          </div>
+          <!-- Latest Payment Part End -->
+        </div>
+      </div>
+    </div>
+    <!-- Page 2 End -->
+    <script src="js/all.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
