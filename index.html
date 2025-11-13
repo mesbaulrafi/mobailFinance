@@ -21,7 +21,7 @@
   <body>
     <!-- Page 1 Start -->
 
-    <div class="max-w-[1100px] m-auto text-center mt-5" id="pageOne">
+    <div class="max-w-[1100px] m-auto text-center mt-5" id="pageOne" hidden>
       <div class="mockup-phone">
         <div class="mockup-phone-camera"></div>
         <div
@@ -93,24 +93,47 @@
     </div>
     <!-- Page 1 End -->
     <!-- Page 2 start  -->
-    <div class="max-w-[1100px] m-auto mt-5 mb-4 ml-[565px] font-[Outfit] text-black" id="pageTwo" hidden>
+    <div
+      class="max-w-[1100px] m-auto mt-5 mb-4 ml-[565px] font-[Outfit] text-black"
+      id="pageTwo"
+    >
       <div class="mockup-phone border-[#ff8938]">
         <div class="mockup-phone-camera"></div>
-        <div class="mockup-phone-display bg-[rgb(244,245,247)] ">
-          <div class=" bg-white rounded-b-4xl">
-            <div class="logo">
-              <picture
-                ><img
-                  class="w-full mt-2"
-                  src="img/Status Bar Black.png"
-                  alt="Status Bar Black.png"
-              /></picture>
-              <picture
-                ><img class="w-full" src="img/Back Bar.png" alt="Back Bar.png"
-              /></picture>
+        <div class="mockup-phone-display bg-[rgb(244,245,247)]">
+          <div class="bg-white rounded-b-4xl">
+            <!-- Time Bar Part Start-->
+            <div class="timePart mt-2">
+              <picture><img src="img/Status Bar Black.png" alt="" /></picture>
             </div>
+            <!-- Time Bar Part End -->
+
+            <!-- Total Balance Part Start -->
+            <div class="py-2 px-6 flex justify-between">
+              <div class="totalBalance flex">
+                <div class="bLogo"><img src="img/B-Logo.png" alt="" /></div>
+                <div class="">
+                  <h2 class="font-extrabold text-[18px] text" id="totalTaka">$ 45000</h2>
+                  <p class="text-[14px] font-normal text-[rgba(8,8,8,0.56)]">
+                    Available Balance
+                  </p>
+                </div>
+              </div>
+              <div
+                class=" border border-[rgba(8,8,8,0.22)] rounded-[10px] text-center py-2 px-4 hover:bg-[#f2f8fe]"
+              >
+                <a
+                  href="#"
+                  id="logOutBtn"
+                  class="h-0 text-[14px] font-normal text-[rgba(8,8,8,0.56)] hover:text-[#0f78f2]"
+                  ><i class="fa-solid fa-arrow-right-from-bracket pr-1"></i> Log
+                  Out</a
+                >
+              </div>
+            </div>
+            <!-- Total Balance Part End -->
+
             <!-- Hedar Text  -->
-            <div class="hedding m-6">
+            <div class="hedding py-3 px-6">
               <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
               <p class="text-[16px] text-[#0808089c] mt-3">
                 Enjoy easy and convenient financial services with us. Cashout
@@ -118,68 +141,334 @@
               </p>
             </div>
             <!-- Hedar Text end  -->
-            <!-- Add Money Part -->
-            <div class="p-6">
+
+            <!-- Dashbord Btn Part Start -->
+            <div class="p-4">
               <div class="flex justify-between">
-                <div
-                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
-                >
-                  <img src="img/add Maney.png" alt="" class="m-auto" />
-                  <p class="text-[14px] text-[#0808089c]">Add Money</p>
-                </div>
-                <div
-                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
-                >
-                  <img src="img/Cashout.png" alt="" class="m-auto" />
-                  <p class="text-[14px] text-[#0808089c]">Cashout</p>
-                </div>
-                <div
-                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
-                >
-                  <img src="img/Transfer Money.png" alt="" class="m-auto" />
-                  <p class="text-[14px] text-[#0808089c]">Transfer Money</p>
-                </div>
-                <!-- Flex Two  -->
+                <button id="addMoneyItem">
+                  <div
+                    class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-[120px] h-[90px] cursor-pointer shadow-3xl m-1 hover:bg-[#f2f8fe]"
+                  >
+                    <img src="img/add Maney.png" alt="" class="m-auto" />
+                    <p
+                      class="text-[14px] text-[#0808089c] hover:text-[#0f78f2]"
+                    >
+                      Add Money
+                    </p>
+                  </div>
+                </button>
+                <button id="cashOutItem">
+                  <div
+                    class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-[120px] h-[90px] cursor-pointer shadow-3xl m-1 hover:bg-[#f2f8fe]"
+                  >
+                    <img src="img/Cashout.png" alt="" class="m-auto" />
+                    <p
+                      class="text-[14px] text-[#0808089c] hover:text-[#0f78f2]"
+                    >
+                      Cashout
+                    </p>
+                  </div>
+                </button>
+                <button id="transferMoneyItem">
+                  <div
+                    class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-[120px] h-[90px] cursor-pointer shadow-3xl m-1 hover:bg-[#f2f8fe]"
+                  >
+                    <img src="img/Transfer Money.png" alt="" class="m-auto" />
+                    <p
+                      class="text-[14px] text-[#0808089c] hover:text-[#0f78f2]"
+                    >
+                      Transfer Money
+                    </p>
+                  </div>
+                </button>
               </div>
-              <div class="flex justify-between mt-6">
-                <div
-                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
-                >
-                  <img src="img/Get Bonus.png" alt="" class="m-auto" />
-                  <p class="text-[14px] text-[#0808089c]">Get Bonus</p>
-                </div>
-                <div
-                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
-                >
-                  <img src="img/Pay Bill.png" alt="" class="m-auto" />
-                  <p class="text-[14px] text-[#0808089c]">Pay Bill</p>
-                </div>
-                <div
-                  class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-full cursor-pointer  hover:shadow-3xl m-1"
-                >
-                  <img src="img/Transactions.png" alt="" class="m-auto" />
-                  <p class="text-[14px] text-[#0808089c]">Transactions</p>
-                </div>
+              <!-- Flex Two  -->
+              <div class="flex justify-between mt-3">
+                <button id="getBonusItem">
+                  <div
+                    class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-[120px] h-[90px] cursor-pointer shadow-3xl m-1 hover:bg-[#f2f8fe]"
+                  >
+                    <img src="img/Get Bonus.png" alt="" class="m-auto" />
+                    <p
+                      class="text-[14px] text-[#0808089c] hover:text-[#0f78f2]"
+                    >
+                      Get Bonus
+                    </p>
+                  </div>
+                </button>
+                <button id="payBillItem">
+                  <div
+                    class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-[120px] h-[90px] cursor-pointer shadow-3xl m-1 hover:bg-[#f2f8fe]"
+                  >
+                    <img src="img/Pay Bill.png" alt="" class="m-auto" />
+                    <p
+                      class="text-[14px] text-[#0808089c] hover:text-[#0f78f2]"
+                    >
+                      Pay Bill
+                    </p>
+                  </div>
+                </button>
+                <button id="transactionsItem">
+                  <div
+                    class="border border-[#b8b1b180] text-center p-5 rounded-2xl w-[120px] h-[90px] cursor-pointer shadow-3xl m-1 hover:bg-[#f2f8fe]"
+                  >
+                    <img src="img/Transactions.png" alt="" class="m-auto" />
+                    <p
+                      class="text-[14px] text-[#0808089c] hover:text-[#0f78f2]"
+                    >
+                      Transactions
+                    </p>
+                  </div>
+                </button>
               </div>
             </div>
-            <!-- Add Money Part End-->
+            <!-- Dashbord Btn Part End-->
           </div>
-          <!-- Latest Payment Part -->
-          <div class="">
+
+          <!-- Add Money Btn click Part Start -->
+          <section id="addMoneyPart" hidden>
+            <div class="px-3 py-2">
+              <h2 class="mb-3 text-[16px] font-semibold">Add Money</h2>
+              <div class="bg-white py-4 px-5 rounded-2xl  h-[410px] ">
+                <div class="">
+                  <h3>Select A Bank</h3>
+                  <div class="p-2">
+                    <select
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.31)]"
+                    >
+                      <option value="">Select Bank</option>
+                      <option value="">Dutch-Bangla Bank</option>
+                      <option value="">BRAC Bank</option>
+                      <option value="">Islami Bank</option>
+                      <option value="">Eastern Bank</option>
+                      <option value="">City Bank</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Bank Account Number</h3>
+                  <div class="p-2">
+                    <input
+                      type="text"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter 11 digit account number"required
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Amount to Add</h3>
+                  <div class="p-2">
+                    <input
+                      type="text"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Add Amount to withdraw"
+                      id="amountAdd"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Pin Number</h3>
+                  <div class="p-2.5 ">
+                    <input
+                      type="password"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter 4 digit pin number"
+                      id="addMoneyPin"
+                    />
+                  </div>
+                </div>
+                <button class="ml-3.5 px-3 py-2 w-[340px] bg-[#0656f8] rounded-3xl text-[#ffffff] cursor-pointer" id="addMoneyBtn">
+                  <p class="text-[18px] font-semibold">Add Money</p>
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Add Money Btn click Part End -->
+
+          <!-- Cash Out Btn click Part Start -->
+           <section id="cashOutPart" hidden>
+            <div class="px-5 py-5">
+              <h2 class="mb-3 text-[16px] font-semibold">Cash Out</h2>
+              <div class="bg-white py-5 px-5 rounded-2xl   ">
+                <div class="">
+                  <h3>Agent Number</h3>
+                  <div class="p-2">
+                    <input
+                      type="text"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter 11 digit number"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Amount</h3>
+                  <div class="p-2">
+                    <input
+                      type="text"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter amount to withdraw"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Pin Number</h3>
+                  <div class="p-2.5 ">
+                    <input
+                      type="password"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter 4 digit pin number"
+                    />
+                  </div>
+                </div>
+                <button class="ml-3.5 mt-2 px-3 py-2 w-[340px] bg-[#0656f8] rounded-3xl text-[#ffffff] cursor-pointer" id="cashOutBtn">
+                  <p class="text-[18px] font-semibold">Withdraw Money</p>
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Cash Out Btn click Part End -->
+
+          <!-- Transfer Money Btn click Part Start -->
+           <section id="transferMoneyPart" hidden>
+            <div class="px-5 py-5">
+              <h2 class="mb-3 text-[16px] font-semibold">Transfer Money</h2>
+              <div class="bg-white py-5 px-5 rounded-2xl   ">
+                <div class="">
+                  <h3>User Account Number</h3>
+                  <div class="p-2">
+                    <input
+                      type="text"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter 11 digit number"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Amount</h3>
+                  <div class="p-2">
+                    <input
+                      type="text"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter amount to withdraw"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Pin Number</h3>
+                  <div class="p-2.5 ">
+                    <input
+                      type="password"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter 4 digit pin number"
+                    />
+                  </div>
+                </div>
+                <button class="ml-3.5 mt-2 px-3 py-2 w-[340px] bg-[#0656f8] rounded-3xl text-[#ffffff] cursor-pointer" id="cashOutBtn">
+                  <p class="text-[18px] font-semibold">Send Now</p>
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Transfer Money Btn click Part End -->
+
+          <!-- Get Bonus Btn click Part Start -->
+           <section id="getBonusPart" hidden>
+            <div class="px-5 py-5">
+              <h2 class="mb-3 text-[16px] font-semibold">Get Bonus</h2>
+              <div class="bg-white py-5 px-5 rounded-2xl   ">
+                <div class="">
+                  <h3>Enter Bonus Coupon</h3>
+                  <div class="p-2">
+                    <input
+                      type="text"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter your coupon"
+                    />
+                  </div>
+                </div>
+                
+                <button class="ml-3.5 mt-2 px-3 py-2 w-[340px] bg-[#0656f8] rounded-3xl text-[#ffffff] cursor-pointer" id="cashOutBtn">
+                  <p class="text-[18px] font-semibold">Get Bonus</p>
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Get Bonus Btn click Part End -->
+
+          <!-- Pay Bill Btn click Part Start -->
+           <section id="payBillPart" hidden>
+            <div class="px-3 py-2">
+              <h2 class="mb-3 text-[16px] font-semibold">Pay Bill</h2>
+              <div class="bg-white py-4 px-5 rounded-2xl  h-[410px] ">
+                <div class="">
+                  <h3>Select To Pay</h3>
+                  <div class="p-2">
+                    <select
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.40)]"
+                    >
+                      <option value="">Select bank</option>
+                      <option value="">Dutch-Bangla Bank</option>
+                      <option value="">BRAC Bank</option>
+                      <option value="">Islami Bank</option>
+                      <option value="">Eastern Bank</option>
+                      <option value="">City Bank</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Biller Account Number</h3>
+                  <div class="p-2">
+                    <input
+                      type="text"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter account number"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Amount to Pay</h3>
+                  <div class="p-2">
+                    <input
+                      type="text" required
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Add Amount to pay"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <h3>Pin Number</h3>
+                  <div class="p-2.5 ">
+                    <input
+                      type="password"
+                      class="px-5 py-2.5 w-[340px] bg-[#f4f5f7] rounded-3xl text-[rgba(8,8,8,0.77)]"
+                      placeholder="Enter 4 digit pin number"
+                    />
+                  </div>
+                </div>
+                <button class="ml-3.5 px-3 py-2 w-[340px] bg-[#0656f8] rounded-3xl text-[#ffffff] cursor-pointer" id="payBillBtn">
+                  <p class="text-[18px] font-semibold">Pay Now</p>
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Pay Bill Btn click Part End -->
+
+          <!-- Transactions Part Part -->
+          <div class="Transactions" hidden>
             <div class="flex justify-between p-6">
               <div class="">
                 <h2 class="font-semibold text-[20px]">Latest Payment</h2>
               </div>
-              <div class="text-[#08080886] "><a href="#">View All</a></div>
+              <div class="text-[#08080886]"><a href="#">View All</a></div>
             </div>
             <div class="ml-5 text-center">
-              <img src="img/Payment 1.png" alt="" class="mt-2">
-              <img src="img/Payment 2.png" alt="" class="mt-2">
-              <img src="img/Payment 3.png" alt="" class="mt-2">
-              <img src="img/Payment 4.png" alt="" class="mt-2">
+              <img src="img/Payment 1.png" alt="" class="mt-2" />
+              <img src="img/Payment 2.png" alt="" class="mt-2" />
+              <img src="img/Payment 3.png" alt="" class="mt-2" />
+              <img src="img/Payment 4.png" alt="" class="mt-2" />
             </div>
           </div>
-          <!-- Latest Payment Part End -->
+          <!-- Transactions Part Part End -->
         </div>
       </div>
     </div>
